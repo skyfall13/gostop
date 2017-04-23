@@ -16,7 +16,8 @@ public class GameTest {
     public void testPutOneCardAndGainNothing() {
         Player[] players = new Player[] { new Player(new Card[0]) };
         Plate dontCarePlate = null;
-        game = new Game(players, dontCarePlate);
+        CardStack stack = null;
+        game = new Game(players, dontCarePlate, stack);
 
         Player player = game.currentPlayer();
         Card card = player.nextCard();
@@ -31,7 +32,8 @@ public class GameTest {
         Player gamingPlayer = new Player(new Card[] { puttingCard });
         Player[] players = new Player[] { gamingPlayer };
         Plate plate = new Plate(new Card[] { puttingCard });
-        game = new Game(players, plate);
+        CardStack stack = null;
+        game = new Game(players, plate, stack);
 
         Player player = game.currentPlayer();
         Card card = player.nextCard();
