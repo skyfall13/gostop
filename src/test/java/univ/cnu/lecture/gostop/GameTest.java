@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 /**
  * Created by tchi on 2017. 4. 23..
@@ -37,5 +38,10 @@ public class GameTest {
         Card[] gains = game.putCard(card);
 
         assertThat(gains.length, is(2));
+    }
+
+    @Test
+    public void testPutOneCardAndGainFourCardForItsAllMatching() {
+        fail("Make it!");
     }
 }
