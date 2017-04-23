@@ -21,8 +21,8 @@ public class GameTest {
     public void testPutOneCardAndGainNothing() {
         Player player = game.currentPlayer();
         Card card = player.nextCard();
-        Card[] gainings = game.putCard(card);
+        Card[] gains = game.putCard(card);
 
-        assertThat(gainings.length, is(0));
+        assertThat(gains.length, is(0));
     }
 }
