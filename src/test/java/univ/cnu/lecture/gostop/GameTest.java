@@ -14,7 +14,7 @@ public class GameTest {
     @Test
     public void testPutOneCardAndGainNothing() {
         Player[] players = new Player[] { new Player(), new Player(), new Player() };
-        game = new Game(players);
+        game = new Game(players, plate);
 
         Player player = game.currentPlayer();
         Card card = player.nextCard();

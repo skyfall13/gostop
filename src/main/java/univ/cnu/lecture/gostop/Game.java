@@ -7,7 +7,7 @@ public class Game {
     private Player[] players;
     private int currentPlayerIndex;
 
-    public Game(Player[] players) {
+    public Game(Player[] players, Plate plate) {
         this.players = players;
         this.currentPlayerIndex = 0;
     }
