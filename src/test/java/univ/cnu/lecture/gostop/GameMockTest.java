@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import static org.junit.Assert.fail;
 import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.*;
 
@@ -57,6 +56,8 @@ public class GameMockTest {
         Player player = game.currentPlayer();
         Card card = player.nextCard();
         Card[] gains = game.putCard(card);
+
+        verify(plate,times(2)).remove(anyObject());
 
         assertThat(gains.length, is(4));
     }

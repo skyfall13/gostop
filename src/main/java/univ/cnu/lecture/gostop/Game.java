@@ -30,6 +30,11 @@ public class Game {
         Card popedCard = stack.pop();
         Card matchedForPoped = plate.matchedCard(popedCard);
 
+        Arrays.asList(new Card[] { matchedOne, matchedForPoped })
+                .stream()
+                .filter(card -> card != null)
+                .forEach(card -> plate.remove(card));
+
         ArrayList<Card> list = new ArrayList<>(Arrays.asList(new Card[] {
                 playerCard,
                 matchedOne,
