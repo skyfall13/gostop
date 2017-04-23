@@ -1,5 +1,6 @@
 package univ.cnu.lecture.gostop;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class Player {
     private final List<Card> cards;
 
     public Player(Card[] cards) {
-        this.cards = Arrays.asList(cards);
+        this.cards = new ArrayList<>(Arrays.asList(cards));
     }
 
     public Card nextCard() {
