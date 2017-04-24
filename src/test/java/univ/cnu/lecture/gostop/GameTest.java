@@ -41,6 +41,24 @@ public class GameTest {
     }
 
     @Test
+    public void testPutOneCardAndGainTwoCard_and_PutOneCard_Again_GainTwoCardForItsMatching() {
+        Card puttingCard = new Card();
+        Player gamingPlayer = new Player(new Card[] { puttingCard });
+        Player[] players = new Player[] { gamingPlayer };
+        Plate plate = new Plate(new Card[] { puttingCard });
+        game = new Game(players, plate);
+
+        Player player = game.currentPlayer();
+        Card card = player.nextCard();
+        Card[] gains = game.putCard(card);
+
+        Card card2 = player.nextCard();
+        gains = game.putCard(card2);
+
+        assertThat(gains.length, is(4));
+    }
+
+    @Test
     public void testPutOneCardAndGainFourCardForItsAllMatching() {
         fail("Make it!");
     }
