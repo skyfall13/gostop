@@ -48,7 +48,8 @@ public class GameTest {
         Player gamingPlayer = new Player(new Card[] { puttingCard });
         Player[] players = new Player[] { gamingPlayer };
         Plate plate = new Plate(new Card[] { puttingCard });
-        game = new Game(players, plate);
+        CardStack stack = null;
+        game = new Game(players, plate, stack);
 
         Player player = game.currentPlayer();
         Card card = player.nextCard();
