@@ -17,4 +17,8 @@ public class Player {
     public Card nextCard() {
         return cards.remove(0);
     }
+
+    public void scores(Card[] gains) {
+        return;
+    }
 }

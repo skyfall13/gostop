@@ -30,4 +30,8 @@ public class Plate {
             return null;
         }
     }
+
+    public void remove(Card card) {
+        return;
+    }
 }
